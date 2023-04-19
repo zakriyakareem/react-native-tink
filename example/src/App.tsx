@@ -18,7 +18,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <TinkView clientId={`2b40d76678a2415eb4be14a415685db2`} redirectUrl={`https://console.tink.com/callback&market=SE`}/>
+      <TinkView clientId={``} redirectUrl={``}/>
     </View>
   );
 }

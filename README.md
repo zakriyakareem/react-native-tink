@@ -11,11 +11,11 @@ npm install react-native-tink
 ## Usage
 
 ```js
-import { multiply } from 'react-native-tink';
+import { TinkView } from 'react-native-tink';
 
 // ...
 
-const result = await multiply(3, 7);
+<TinkView clientId={' your client Id '} redirectUrl={' redirect url '}/>
 ```
 
 ## Contributing
