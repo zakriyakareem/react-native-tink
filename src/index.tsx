@@ -1,4 +1,7 @@
-import { NativeModules, Platform } from 'react-native';
+import * as React from "react";
+import { NativeModules, Platform,
+  } from 'react-native';
+import WebView from 'react-native-webview';
 
 const LINKING_ERROR =
   `The package 'react-native-tink' doesn't seem to be linked. Make sure: \n\n` +
@@ -17,6 +20,24 @@ const Tink = NativeModules.Tink
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return Tink.multiply(a, b);
-}
+     export function TinkView( {clientId,redirectUrl}:any ) {
+       return <WebView
+        source={{ uri: `https://link.tink.com/1.0/account-check/create-report?client_id=${clientId}&redirect_uri=${redirectUrl}` }}
+        javaScriptEnabled={true}
+        domStorageEnabled={true}
+        style={{flex:1}}
+      />
+    }
+
+      
+
+
+
+
+
+
+
+
+
+
+
